@@ -3,9 +3,8 @@
   <head> 
     <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <title>Your Name - Resume</title> 
+    <title>Kaitlyn Gonzalez - Resume</title> 
     <style>
-        /* Simple, inline CSS for styling */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -15,9 +14,10 @@
             color: #333;
         }
 
+        /* Header Banner */
         header {
-            background: #333;
-            color: #FFC0CB;
+            background: #FFC0CB; /* Pink background */
+            color: #fff; /* White text */
             padding: 1rem 0;
             text-align: center;
         }
@@ -33,7 +33,7 @@
         }
 
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 2rem auto;
             padding: 1rem;
             background: #fff;
@@ -45,11 +45,13 @@
             margin-bottom: 2rem;
         }
 
+        /* Section headers styled pink */
         h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #FFC0CB;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
             font-size: 1.5rem;
+            color: #FFC0CB;
         }
 
         ul {
@@ -69,12 +71,45 @@
         a:hover {
             text-decoration: underline;
         }
-        main img {
-            display: block;
-            max-width: 100%;
+
+        /* About section with photo + text side by side */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-container img {
+            width: 180px;   /* smaller photo */
             height: auto;
-             margin: 0 auto;
             border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        /* Education & Recognition Section */
+        .edu-list > li {
+            margin-bottom: 1.5rem;  /* space between main categories */
+        }
+
+        .edu-list > li strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;  /* space under each title */
+            color: #333;
+        }
+
+        .sub-list {
+            margin-left: 1.2rem;   /* indent sub-items */
+            margin-top: 0.3rem;
+        }
+
+        .sub-list li {
+            margin: 0.3rem 0;      /* tighter spacing within sub-lists */
+            font-size: 0.95rem;
         }
     </style> 
   </head> 
@@ -84,29 +119,97 @@
       <p>Resume Website</p> 
     </header> 
     <main>
-    <img src="assests/headshot.jpeg"> 
+
       <section id="about"> 
         <h2>About Me</h2> 
-        <p> Student leader with an exuberance for life matched with a tenacity for excellence and skills in communication, inclusion, and organization. With a passion for community and collaboration, I bring a solutions-oriented approach and see challenges as opportunities, determined to leave a positive impact. 
- </p> 
+        <div class="about-container">
+          <img src="assests/headshot.jpeg" alt="Headshot of Kaitlyn Gonzalez"> 
+          <div class="about-text">
+            <p>Student leader with an exuberance for life matched with a tenacity for excellence and skills in communication, inclusion, and organization. With a passion for community and collaboration, I bring a solutions-oriented approach and see challenges as opportunities, determined to leave a positive impact.</p> 
+          </div>
+        </div>
       </section> 
-    <section id="experience"> 
+
+      <section id="experience"> 
         <h2>Experience</h2> 
         <ul> 
-          <li> <strong>Teaching Fellow</strong> at <em>Breakthrough Miami</em> (2023 - 2025) <p>Teaches 5th-7th grade science courses. Leads 3 groups of 15 scholars in achieving their fullest potential in preparation for the upcoming school year.
-Motivates 50 students from under-resourced communities to fulfill their athletic goals. Teaching fifth to eighth-grade athletes how to cooperate effectively in a team setting.
-</p> </li> 
-          <li> <strong>Founder</strong> at <em>Preventing Cardiac Death: EKG Initiative</em> (2024-present) <p>Alongside The Nicklaus Children's Hospital Heart Institute, I established a yearly drive where underrepresented youth are able to attain free electrocardiogram (EKG) tests in order to prevent Sudden Cardiac Death.  Our first event was held at the 2024 Breakthrough Miami 5K charity race, with 180 registrants.</p> </li> 
+          <li> <strong>Teaching Fellow</strong> at <em>Breakthrough Miami</em> (2023 - 2025) 
+            <p>Teaches 5th-7th grade science courses. Leads 3 groups of 15 scholars in achieving their fullest potential in preparation for the upcoming school year. Motivates 50 students from under-resourced communities to fulfill their athletic goals. Teaching fifth to eighth-grade athletes how to cooperate effectively in a team setting.</p> 
+          </li> 
+          
+          <li> <strong>Founder</strong> at <em>Preventing Cardiac Death: EKG Initiative</em> (2024-present) 
+            <p>Alongside The Nicklaus Children's Hospital Heart Institute, I established a yearly drive where underrepresented youth are able to attain free electrocardiogram (EKG) tests in order to prevent Sudden Cardiac Death. Our first event was held at the 2024 Breakthrough Miami 5K charity race, with 180 registrants.</p> 
+          </li> 
+          
+          <li> <strong>Student Government Officer | Head of the Communications Committee</strong> at <em>Ransom Everglades School</em> (2022-2024) 
+            <p>Effectively communicates between students and administration to support a positive schooling environment. Updates school social media accounts daily, photographs all school events, and creates a monthly newsletter that recaps all events and triumphs for the class of 2024.</p> 
+          </li> 
         </ul> 
       </section> 
+
       <section id="skills"> 
         <h2>Skills</h2> 
         <ul> 
-          <li>Fluent in English and Spanish</li> 
+          <li>Medical Translation: Fluent in English and Spanish</li> 
           <li>Proficient in Portuguese</li> 
-          <li>CPR, and Heat Illness Certification</li> 
+          <li>CPR and Heat Illness Certification</li> 
+          <li>Video Editing</li>
+          <li>Graphic Design</li>
         </ul> 
       </section> 
+
+      <section id="education"> 
+        <h2>Education & Recognitions</h2> 
+        <ul class="edu-list">
+          <li><strong>University of Miami (UM)</strong>
+            <ul class="sub-list">
+              <li>President’s & Provost’s Honor Rolls, Dean’s List</li>
+              <li>National Society of Leadership and Success – Presidential Member</li>
+            </ul>
+          </li>
+
+          <li><strong>Miami Herald</strong>
+            <ul class="sub-list">
+              <li>Silver Knight Nominee – Science</li>
+            </ul>
+          </li>
+
+          <li><strong>Breakthrough Miami Scholar</strong> (2016–2024)
+            <ul class="sub-list">
+              <li>Spirit Star Award (4x)</li>
+            </ul>
+          </li>
+
+          <li><strong>Ransom Everglades School (RE)</strong> (2017–2024)
+            <ul class="sub-list">
+              <li>High School Diploma</li>
+              <li>Inaugural Core Value Award: Service and Outreach</li>
+              <li>Academic Honor Roll</li>
+              <li>Paul Ransom Medallion of Excellence</li>
+              <li>Ransom Everglades Seal of Biliteracy</li>
+              <li>Highest score (5) – National Examination in World Language: Portuguese</li>
+              <li>Highest score (5) – National Examination in World Language: Spanish</li>
+            </ul>
+          </li>
+
+          <li><strong>Honor Societies</strong>
+            <ul class="sub-list">
+              <li>Mu Alpha Theta Honor Society</li>
+              <li>Science Honor Society</li>
+              <li>Portuguese Honor Society</li>
+              <li>National Honor Society</li>
+            </ul>
+          </li>
+
+          <li><strong>Athletics</strong>
+            <ul class="sub-list">
+              <li>Coaches Award – Varsity Lacrosse</li>
+              <li>Foundation Award – Varsity Lacrosse</li>
+            </ul>
+          </li>
+        </ul>
+      </section> 
+
       <section id="contact"> 
         <h2>Contact</h2> 
         <p>Email: <a href="mailto:kaitlyn24gonzalez@gmail.com">kaitlyn24gonzalez@gmail.com</a></p> 
